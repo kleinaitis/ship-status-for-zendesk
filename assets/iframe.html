@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+  <link href="main.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="content"></div>
+
+<footer>
+  <a href="https://mysite.github.io/support" target="_blank">Report bugs</a>
+</footer>
+
+<script id="requester-template" type="text/x-handlebars-template">
+  <table>
+    <tr>
+      <td>Customer:</td>
+      <td class="data">{{name}}</td>
+    </tr>
+    <tr>
+      <td>Status:</td>
+      <td class="data">{{status}}</td>
+    </tr>
+    <tr>
+      <td>Date Checked:</td>
+      <td class="data">{{last_checked}}</td>
+    </tr>
+  </table>
+</script>
+
+<script id="error-template" type="text/x-handlebars-template">
+  <p>{{status}} - {{statusText}} error. Please report a bug at the link below.</p>
+</script>
+
+<script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@4.3.3/dist/handlebars.min.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>
